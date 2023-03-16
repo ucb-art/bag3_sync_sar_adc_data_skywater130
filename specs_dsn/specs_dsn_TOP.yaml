@@ -1,0 +1,30 @@
+impl_lib: AAA_DSN_COMP
+dsn_class: bag3_sync_sar_adc.design.comparator.CompDesigner
+root_dir: gen_outputs/dsn_TOP
+
+process_info:
+  unit_res_ohms: 6600
+  cap_mismatch_percentage: 10
+top_specs:
+  resolution_bits: 8
+  samp_freq: 1e6
+  input_range: 1.8
+  throughput: 11
+app_specs:
+  clk_in_jitter: 1e-11
+
+# opt_components:
+#   comp: bag3_sync_sar_adc/bag3_sync_sar_adc/specs_gen/sar_lay/specs_comp_sa.yaml
+#   bootstrap: 
+
+gen_specs:
+dest_files:
+  sar_top: 
+  sampler:
+  logic:
+  comp:
+  clkgen:
+  cdac:
+top_verification_tbm:
+  static:
+  dynamic:

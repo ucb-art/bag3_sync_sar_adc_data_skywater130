@@ -1,0 +1,123 @@
+meas_name: 'tb_boot'
+meas_class: bag3_sync_sar_adc.measurement.bootstrap.BootstrapMM
+
+impl_lib: AAA_Bootstrap
+impl_cell: tb_bootstrap
+dut_class: bag3_sync_sar_adc.layout.bootstrap_simple.Bootstrap_simple
+root_dir: gen_outputs/bootstrap_meas
+
+gen_specs_file: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_gen/bootstrap/specs_lay.yaml'
+
+meas_params:
+  swp_info:
+    vdm: # these are the parameters you sweep across
+      type: 'LINEAR'
+      start: 0.0003
+      stop: 0.85
+      num: 2
+    # c_load: 
+    #   type: 'LINEAR'
+    #   start: 1e-12
+    #   stop: 2e-12
+    #   num: 2
+    num_samp: # these are the parameters you sweep across
+      type: 'LINEAR'
+      start: 64
+      stop: 128
+      num: 2
+    num_sig: # these are the parameters you sweep across
+      type: 'LINEAR'
+      start: 3
+      stop: 7
+      num: 2
+    
+  tbm_specs:
+    sim_envs:
+      - tt_25
+    save_outputs: ['VDD', 'VSS', 'out<8:0>', 'in', 'sample', 'XDUT:in', 'XDUT:out_8', 'XDUT:out_0']
+    tran_options:
+      #maxstep: 1.0e-12
+      errpreset: conservative
+      noisefmax: 5e9
+      noiseseed: 1
+      noisescale: 1
+    sim_params:
+      t_rf: 20e-12
+      base_per:  6.25e-8 #15625e-12
+      base_sample: 64
+      t_per: 'base_per*base_sample/num_samp'
+      num_samp: 64
+      num_sig: 17
+      freq_sig: 'num_sig/(num_samp*t_per)'
+      t_sim: '(num_samp+20)*t_per+3*t_per/4'
+      v_vcm: 0.9
+      vdm: 0.9 #'v_VDD/2'
+      c_load: 10e-15
+      vdd: 1.8
+      v_VDD: 1.8
+      v_VSS: 0
+      numbits: 9
+      
+    pwr_domain:
+      in: !!python/tuple ['VSS', 'VDD']
+      out: !!python/tuple ['VSS', 'VDD']
+      sample: !!python/tuple ['VSS', 'VDD']
+      sample_b: !!python/tuple ['VSS', 'VDD']
+    sup_values:
+      VDD: 1.8
+      VSS: 0.0
+    load_list:
+      - pin: 'out<8>'
+        type: 'cap'
+        value: '112*c_load'
+      - pin: 'out<7>'
+        type: 'cap'
+        value: '64*c_load'
+      - pin: 'out<6>'
+        type: 'cap'
+        value: '36*c_load'
+      - pin: 'out<5>'
+        type: 'cap'
+        value: '20*c_load'
+      - pin: 'out<4>'
+        type: 'cap'
+        value: '12*c_load'
+      - pin: 'out<3>'
+        type: 'cap'
+        value: '6*c_load'
+      - pin: 'out<2>'
+        type: 'cap'
+        value: '3*c_load'
+      - pin: 'out<1>'
+        type: 'cap'
+        value: '2*c_load'
+      - pin: 'out<0>'
+        type: 'cap'
+        value: 'c_load'
+    src_list:
+      - type: vpulse
+        lib: analogLib
+        value: 
+          v1: 'v_VDD'
+          v2: 'v_VSS'
+          period: 't_per'
+          rise: 't_rf'
+        conns: {PLUS: sample_b, MINUS: VSS}
+      - type: vpulse
+        lib: analogLib
+        value: 
+          v1: 'v_VSS'
+          v2: 'v_VDD'
+          period: 't_per'
+          rise: 't_rf'
+        conns: {PLUS: sample, MINUS: VSS}
+      - type: vsin
+        lib: analogLib
+        value:
+          vo: v_VDD/2
+          va: 'vdm'
+          freq: 'freq_sig'
+        conns: {PLUS: in, MINUS: VSS}
+    swp_info:
+      {}
+    

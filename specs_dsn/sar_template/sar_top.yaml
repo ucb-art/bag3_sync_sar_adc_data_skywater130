@@ -1,0 +1,34 @@
+impl_lib: AAAA_SAR_lay_sky_dsn
+impl_cell: AAA_Slice_sync
+root_dir: gen_outputs/bag3_sync_sar_adc/AAAA_SAR_lay_sky_dsn
+lay_class: bag3_sync_sar_adc.layout.sar_sync_bootstrap.SARSliceBootstrap
+
+params:
+  tr_widths: &tr_w
+    sig: {2: 1, 3: 2}
+    cap: {3: 3, 4: 3}
+    sup: {2: 1, 3: 1, 4: 4, 5: 1}
+  tr_spaces: &tr_sp
+    {}
+  shield: &shield False
+  sampler_params: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/bootstrap/specs_lay_sample_top.yaml'
+  logic_params: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/specs_logic_array_sync.yaml'
+  comp_params: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/specs_comp.yaml'
+  clkgen_params: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/specs_clk_counter.yaml'
+  cdac_params: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/specs_cdac_mim.yaml'  
+  route_power: False
+  decoupling_cap_params:
+    decoupling_margin: 2000
+    cap_config:
+      top_layer: 4
+      bot_layer: 3 
+      num_rows: 1
+      num_cols: 1
+      dum_col_l: 0
+      unit_height: 800
+      unit_width: 800
+      rotateable: True
+      mim_type: '45'
+      has_res_metal: False
+
+
