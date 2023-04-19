@@ -9,22 +9,27 @@ top_specs:
   resolution_bits: 8
   samp_freq: 1e6
   input_range: 1.8
-  throughput: 11
+  throughput: 11 # latency
 app_specs:
   clk_in_jitter: 1e-11
 
-# opt_components:
-#   comp: bag3_sync_sar_adc/bag3_sync_sar_adc/specs_gen/sar_lay/specs_comp_sa.yaml
-#   bootstrap: 
+opt_components:
+  comp: data/bag3_sync_sar_adc/specs_dsn/specs_dsn_comp.yaml
+  bootstrap: data/bag3_sync_sar_adc/specs_dsn/specs_dsn_bootstrap.yaml
 
-gen_specs:
+gen_specs: data/bag3_sync_sar_adc/specs_dsn/sar_template/sar_top.yaml
 dest_files:
-  sar_top: 
-  sampler:
-  logic:
-  comp:
-  clkgen:
-  cdac:
+  directory: data/bag3_sync_sar_adc/specs_dsn/sar_run1/ #Change this 
+  sar_top: sar_top.yaml
+  sampler: 
+    top: bootstrap/specs_lay_sample_top.yaml
+    sig_sampler: bootstrap/specs_lay.yaml
+    vcm_sampler: bootstrap/specs_lay_diff.yaml
+    vcm_mid_sw:  bootstrap/specs_vcm_sw_mid_n.yaml
+  logic: specs_logic_array_sync.yaml
+  comp: specs_comp.yaml
+  clkgen: specs_clk_counter.yaml
+  cdac: specs_cdac_mim.yaml
 top_verification_tbm:
-  static:
-  dynamic:
+  static: data/bag3_sync_sar_adc/specs_meas/sar_meas/specs_mea_sar_slice_static.yaml
+  dynamic: data/bag3_sync_sar_adc/specs_meas/sar_meas/specs_mea_sar_slice_dynamic.yaml

@@ -383,7 +383,7 @@ params:
     col_list: [1, 1, 2, 4, 4]
     sw_type: ['n', 'n', 'p']
     diff_idx: 5
-    width: &cap_width 1600 # in resolution units (um/0.005)
+    width: &cap_width 3000 # in resolution units (um/0.005)
     seg: 16  #changes switch size
     seg_cm: 8
 
@@ -403,8 +403,8 @@ params:
       bot_w: 1
       bot_y_w: 4
       unit_cap: True
-      unit_height: 400
-      unit_width: 400 
+      unit_height: 1000
+      unit_width: 1000 
       mim_type: '34'
       cap_sp: 2
       rotateable: False

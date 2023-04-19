@@ -6,7 +6,7 @@ impl_cell: tb_bootstrap
 dut_class: bag3_sync_sar_adc.layout.bootstrap_simple.Bootstrap_simple
 root_dir: gen_outputs/bootstrap_meas
 
-gen_specs_file: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_gen/bootstrap/specs_lay.yaml'
+gen_specs_file: 'data/bag3_sync_sar_adc/specs_gen/bootstrap/specs_lay.yaml'
 
 meas_params:
   swp_info:

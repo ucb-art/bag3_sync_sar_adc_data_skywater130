@@ -5,7 +5,7 @@ impl_cell: SAR_SLICE_STATIC
 lay_class: bag3_sync_sar_adc.layout.sar_sync_bootstrap.SARSliceBoostrap
 root_dir: gen_outputs/sarslice2
 
-gen_specs_file: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_gen/sar_lay/specs_slice_sync_bootstrap_small.yaml'
+gen_specs_file: 'data/bag3_sync_sar_adc/specs_gen/sar_lay/specs_slice_sync_bootstrap_small.yaml'
 
 meas_params:
   tbm_specs:

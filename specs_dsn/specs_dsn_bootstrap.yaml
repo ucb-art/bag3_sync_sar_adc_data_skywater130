@@ -3,7 +3,7 @@ dsn_class: bag3_sync_sar_adc.design.bootstrap.BootstrapDesigner
 root_dir: gen_outputs/dsn_comp
 
 dsn_params:
-  gen_specs: bag3_sync_sar_adc/bag3_sync_sar_adc/specs_gen/bootstrap/specs_lay.yaml
+  gen_specs: data/bag3_sync_sar_adc/specs_gen/bootstrap/specs_lay.yaml
   #FIXME: really have full sampler, need to think a little harder/what to optimize for there
 
   dsn_basename: AAA_BOOT
@@ -27,4 +27,5 @@ dsn_params:
 
   env_list: [tt_25]
 
-  meas_params: bag3_sync_sar_adc/bag3_sync_sar_adc/specs_meas/sar_meas/specs_meas_bootstrap.yaml
+  meas_params: data/bag3_sync_sar_adc/specs_meas/sar_meas/specs_meas_bootstrap.yaml
+  dest_file: data/bag3_sync_sar_adc/specs_dsn/sar_run1/bootstrap/specs_lay.yaml

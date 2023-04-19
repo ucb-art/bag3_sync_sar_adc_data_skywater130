@@ -11,11 +11,12 @@ params:
   tr_spaces: &tr_sp
     {}
   shield: &shield False
-  sampler_params: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/bootstrap/specs_lay_sample_top.yaml'
-  logic_params: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/specs_logic_array_sync.yaml'
-  comp_params: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/specs_comp.yaml'
-  clkgen_params: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/specs_clk_counter.yaml'
-  cdac_params: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/specs_cdac_mim.yaml'  
+  directory: True
+  sampler_params: 'data/bag3_sync_sar_adc/specs_dsn/sar_template/bootstrap/specs_lay_sample_top.yaml'
+  logic_params: 'data/bag3_sync_sar_adc/specs_dsn/sar_template/specs_logic_array_sync.yaml'
+  comp_params: 'data/bag3_sync_sar_adc/specs_dsn/sar_template/specs_comp.yaml'
+  clkgen_params: 'data/bag3_sync_sar_adc/specs_dsn/sar_template/specs_clk_counter.yaml'
+  cdac_params: 'data/bag3_sync_sar_adc/specs_dsn/sar_template/specs_cdac_mim.yaml'  
   route_power: False
   decoupling_cap_params:
     decoupling_margin: 2000

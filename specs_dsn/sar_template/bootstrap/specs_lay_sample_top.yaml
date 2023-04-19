@@ -18,7 +18,7 @@ params:
     mim_type: '45'
     has_res_metal: False
 
-  sig_sampler: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/bootstrap/specs_lay.yaml'
-  vcm_sampler: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/bootstrap/specs_lay_diff.yaml'
-  vcm_mid_sw:  'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_dsn/sar_template/bootstrap/specs_vcm_sw_mid_n.yaml'
+  sig_sampler: 'data/bag3_sync_sar_adc/specs_dsn/sar_template/bootstrap/specs_lay.yaml'
+  vcm_sampler: 'data/bag3_sync_sar_adc/specs_dsn/sar_template/bootstrap/specs_lay_diff.yaml'
+  vcm_mid_sw:  'data/bag3_sync_sar_adc/specs_dsn/sar_template/bootstrap/specs_vcm_sw_mid_n.yaml'
 

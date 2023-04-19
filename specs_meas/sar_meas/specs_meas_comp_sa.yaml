@@ -6,17 +6,17 @@ impl_cell: tb_comp_delay_test
 dut_class: bag3_sync_sar_adc.layout.sar_comp.SARCompCore
 root_dir: gen_outputs/sar_comp_meas
 
-gen_specs_file: 'bag3_sync_sar_adc/bag3_sync_sar_adc/specs_gen/sar_lay/specs_comp_sa.yaml'
+gen_specs_file: 'data/bag3_sync_sar_adc/specs_gen/sar_lay/specs_comp_sa.yaml'
 
 meas_params:
-  analysis: ['delay', 'noise']
+  analysis: ['delay'] #'noise']
   swp_info:
-    {}
-    # v_vcm: # these are the parameters you sweep across
-    #   type: 'LINEAR'
-    #   start: 1
-    #   stop: 1.2
-    #   num: 2
+    # {}
+    v_vcm: # these are the parameters you sweep across
+      type: 'LINEAR'
+      start: 1
+      stop: 1.2
+      num: 3
     # c_load: # these are the parameters you sweep across
     #   type: 'LINEAR'
     #   start: 1e-15
