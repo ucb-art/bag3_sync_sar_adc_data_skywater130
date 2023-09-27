@@ -1,0 +1,68 @@
+impl_cell: AAA_Logic_Arr_sync
+impl_lib: AAA_SAR
+lay_class: bag3_sync_sar_adc.layout.sar_logic_sync.SARLogicArray
+params:
+  logic_array:
+    flop_out_unit_row_arr: [5, 4]
+    has_pmos_sw: true
+    logic_unit_row_arr: [2, 3, 4]
+    lower_layer_routing: true
+    seg_dict:
+      buf_int: [4, 16]
+      buf_out: [4, 16]
+      flop_out: 32
+      logic:
+        buf: [4, 8]
+        buf_state: [1, 2]
+        flop: 16
+        inv_clk: 2
+        inv_done: 2
+        inv_ret: 2
+        inv_state: 2
+        nand_done: 2
+        nand_mid: 2
+        nand_state: 2
+        nor: 2
+        oai: {seg: 4, seg_pstack1: 8}
+        oai_fb: 3
+      logic_scale_list: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+    substrate_row: false
+    w_n: 84
+    w_p: 110
+  pinfo:
+    tile_specs:
+      abut_list: []
+      arr_info:
+        lch: 30
+        top_layer: 5
+        tr_spaces: {}
+        tr_widths:
+          clk: {2: 1}
+          sig: {2: 1}
+          sup: {2: 1}
+      place_info:
+        logic_tile:
+          bot_mirror: true
+          priority: 1
+          row_specs:
+          - bot_wires:
+              data: [sup, 'sig<0:1>']
+              shared: [sup]
+            flip: true
+            mos_type: nch
+            threshold: standard
+            top_wires: ['sig<0:2>']
+            width: 84
+          - bot_wires: ['sig<0:1>']
+            mos_type: pch
+            threshold: standard
+            top_wires:
+              data: ['sig<0:1>', sup]
+              shared: [sup]
+            width: 110
+          top_mirror: true
+    tiles:
+    - {name: logic_tile}
+  w_n: 84
+  w_p: 110
+root_dir: gen_outputs/bag_sar

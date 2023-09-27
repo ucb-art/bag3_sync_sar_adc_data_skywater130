@@ -1,0 +1,20 @@
+dsn_class: bag3_sync_sar_adc.design.bootstrap.BootstrapDesigner
+dsn_params:
+  dest_file: data/bag3_sync_sar_adc/specs_dsn/sar_run1/bootstrap/specs_lay.yaml
+  dsn_basename: AAA_BOOT
+  dsn_fixed_params: {}
+  dsn_swp_params:
+    cap_n: {num: 3, start: 8, stop: 24}
+    off0: {num: 2, start: 8, stop: 24}
+    off1: {num: 2, start: 8, stop: 24}
+  env_list: [tt_25]
+  gen_specs: data/bag3_sync_sar_adc/specs_dsn/sar_run1/bootstrap/specs_lay_dsn.yaml
+  meas_params: data/bag3_sync_sar_adc/specs_dsn/sar_run1/specs_meas_bootstrap.yaml
+  opt_specs:
+    opt: [max_enob, true]
+    spec_constraints:
+      max_enob: [8.0, null]
+    var_constraints: {}
+  result_dest_fi;e: data/bag3_sync_sar_adc/specs_dsn/sar_run1/specs_bootstrap_single_result.yaml
+impl_lib: AAA_DSN_BOOT
+root_dir: gen_outputs/dsn_comp

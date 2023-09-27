@@ -1,0 +1,23 @@
+impl_cell: AAA_Slice_sync
+impl_lib: AAAA_SAR_lay_sky_dsn
+lay_class: bag3_sync_sar_adc.layout.sar_sync_bootstrap.SARSliceBootstrap
+params:
+  cdac_params: data/bag3_sync_sar_adc/specs_dsn/sar_run1/specs_cdac_mim.yaml
+  clkgen_params: data/bag3_sync_sar_adc/specs_dsn/sar_run1/specs_clk_counter.yaml
+  comp_params: data/bag3_sync_sar_adc/specs_dsn/sar_run1/specs_comp.yaml
+  decoupling_cap_params:
+    cap_config: {bot_layer: 3, dum_col_l: 0, has_res_metal: false, mim_type: '45',
+      num_cols: 1, num_rows: 1, rotateable: true, top_layer: 4, unit_height: 800,
+      unit_width: 800}
+    decoupling_margin: 2000
+  directory: true
+  logic_params: data/bag3_sync_sar_adc/specs_dsn/sar_run1/specs_logic_array_sync.yaml
+  route_power: false
+  sampler_params: data/bag3_sync_sar_adc/specs_dsn/sar_run1/bootstrap/specs_lay_sample_top.yaml
+  shield: false
+  tr_spaces: {}
+  tr_widths:
+    cap: {3: 3, 4: 3}
+    sig: {2: 1, 3: 2}
+    sup: {2: 1, 3: 1, 4: 4, 5: 1}
+root_dir: gen_outputs/bag3_sync_sar_adc/AAAA_SAR_lay_sky_dsn

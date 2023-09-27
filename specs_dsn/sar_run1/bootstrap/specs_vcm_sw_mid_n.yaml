@@ -1,0 +1,39 @@
+impl_cell: AAA_CapDac
+impl_lib: AAATapeoutSAR
+lay_class: xbase.layout.mos.top.GenericWrapper
+params:
+  cls_name: bag3_sync_sar_adc.layout.sampler_top.NMOSSwitch
+  params:
+    ncols_tot: 36
+    pinfo:
+      tile_specs:
+        abut_list: []
+        arr_info:
+          lch: 30
+          top_layer: 4
+          tr_spaces: null
+          tr_widths:
+            clk: {2: 1, 3: 1, 4: 3, 5: 4}
+            sig: {2: 1, 3: -1, 4: 7}
+            sup: {2: 1, 3: -1, 4: 3, 5: -1}
+            vref: {3: -1}
+        place_info:
+          sw_tile:
+            bot_mirror: false
+            priority: 1
+            row_specs:
+            - bot_wires: [sup, clk]
+              mos_type: nch
+              threshold: standard
+              top_wires:
+                data: ['sig<0:1>']
+                shared: [sig<1>]
+              width: 84
+            top_mirror: false
+      tiles:
+      - {name: sw_tile}
+    segn: 34
+    segp: 34
+    wn: 84
+    wp: 110
+root_dir: gen_outputs/bag_sar

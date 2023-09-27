@@ -1,0 +1,51 @@
+dut_class: bag3_sync_sar_adc.layout.bootstrap_simple.Bootstrap_simple
+gen_specs_file: data/bag3_sync_sar_adc/specs_gen/bootstrap/specs_lay.yaml
+impl_cell: tb_bootstrap
+impl_lib: AAA_Bootstrap
+meas_class: bag3_sync_sar_adc.measurement.bootstrap.BootstrapMM
+meas_name: tb_boot
+meas_params:
+  swp_info:
+    num_samp: {num: 2, start: 64, stop: 128, type: LINEAR}
+    num_sig: {num: 2, start: 3, stop: 7, type: LINEAR}
+    vdm: {num: 2, start: 0.0003, stop: 0.85, type: LINEAR}
+  tbm_specs:
+    load_list:
+    - {pin: out<8>, type: cap, value: 112*c_load}
+    - {pin: out<7>, type: cap, value: 64*c_load}
+    - {pin: out<6>, type: cap, value: 36*c_load}
+    - {pin: out<5>, type: cap, value: 20*c_load}
+    - {pin: out<4>, type: cap, value: 12*c_load}
+    - {pin: out<3>, type: cap, value: 6*c_load}
+    - {pin: out<2>, type: cap, value: 3*c_load}
+    - {pin: out<1>, type: cap, value: 2*c_load}
+    - {pin: out<0>, type: cap, value: c_load}
+    pwr_domain:
+      in: !!python/tuple [VSS, VDD]
+      out: !!python/tuple [VSS, VDD]
+      sample: !!python/tuple [VSS, VDD]
+      sample_b: !!python/tuple [VSS, VDD]
+    save_outputs: [VDD, VSS, 'out<7:0>', in, sample, 'XDUT:in', 'XDUT:out_8', 'XDUT:out_0']
+    sim_envs: [tt_25]
+    sim_params: {base_per: 6.25e-08, base_sample: 64, c_load: 1e-14, freq_sig: num_sig/(num_samp*t_per),
+      num_samp: 64, num_sig: 17, numbits: 9, t_per: base_per*base_sample/num_samp,
+      t_rf: 2e-11, t_sim: (num_samp+20)*t_per+3*t_per/4, v_VDD: 1.8, v_VSS: 0, v_vcm: 0.9,
+      vdd: 1.8, vdm: 0.9}
+    src_list:
+    - conns: {MINUS: VSS, PLUS: sample_b}
+      lib: analogLib
+      type: vpulse
+      value: {period: t_per, rise: t_rf, v1: v_VDD, v2: v_VSS}
+    - conns: {MINUS: VSS, PLUS: sample}
+      lib: analogLib
+      type: vpulse
+      value: {period: t_per, rise: t_rf, v1: v_VSS, v2: v_VDD}
+    - conns: {MINUS: VSS, PLUS: in}
+      lib: analogLib
+      type: vsin
+      value: {freq: freq_sig, va: vdm, vo: v_VDD/2}
+    sup_values: {VDD: 1.8, VSS: 0.0}
+    swp_info: {}
+    tran_options: {errpreset: conservative, noisefmax: 5000000000.0, noisescale: 1,
+      noiseseed: 1}
+root_dir: gen_outputs/bootstrap_meas

@@ -29,3 +29,4 @@ dsn_params:
 
   meas_params: data/bag3_sync_sar_adc/specs_meas/sar_meas/specs_meas_bootstrap.yaml
   dest_file: data/bag3_sync_sar_adc/specs_dsn/sar_run1/bootstrap/specs_lay.yaml
+  result_dest_fi;e: data/bag3_sync_sar_adc/specs_dsn/sar_run1/specs_bootstrap_single_result.yaml

@@ -32,3 +32,4 @@ dsn_params:
 
   meas_params: data/bag3_sync_sar_adc/specs_meas/sar_meas/specs_meas_comp_sa.yaml
   dest_file: data/bag3_sync_sar_adc/specs_dsn/sar_run1/specs_comp.yaml
+  result_dest_file: data/bag3_sync_sar_adc/specs_dsn/sar_run1/specs_comp_result.yaml

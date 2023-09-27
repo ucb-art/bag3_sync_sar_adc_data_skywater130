@@ -1,0 +1,12 @@
+impl_cell: AAAbootstrap
+impl_lib: AAA_bootstrap_sampletop_v3
+lay_class: bag3_sync_sar_adc.layout.sampler_top.SamplerTop
+params:
+  cap_config: {bot_layer: 3, dum_col_l: 0, has_res_metal: false, mim_type: '45', num_cols: 1,
+    num_rows: 1, rotateable: true, top_layer: 4, unit_height: 800, unit_width: 800}
+  decap_width: 2000
+  route_power: false
+  sig_sampler: data/bag3_sync_sar_adc/specs_dsn/sar_run1/bootstrap/specs_lay.yaml
+  vcm_mid_sw: data/bag3_sync_sar_adc/specs_dsn/sar_run1/bootstrap/specs_vcm_sw_mid_n.yaml
+  vcm_sampler: data/bag3_sync_sar_adc/specs_dsn/sar_run1/bootstrap/specs_lay_diff.yaml
+root_dir: gen_outputs/bag3_sync_sar_adc/sampler_top

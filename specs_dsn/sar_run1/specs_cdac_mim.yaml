@@ -1,0 +1,80 @@
+impl_cell: AAA_CapDac
+impl_lib: AAA_SAR_lay2_small
+lay_class: bag3_sync_sar_adc.layout.sar_cdac.CapDacColCore
+params:
+  cap_config: {bot_layer: 3, bot_w: 1, bot_y_w: 4, cap_sp: 2, has_rmetal: false, ismim: true,
+    mim_type: '34', pin_layer: 3, rotateable: false, top_layer: 4, top_w: 1, unit_cap: true,
+    unit_height: 400, unit_width: 400}
+  col_list: [1, 1, 1, 3, 3, 4, 4, 4, 4]
+  diff_idx: 7
+  has_cm_sw: false
+  lower_layer_routing: true
+  nbits: 8
+  ny_list: [1, 1, 1, 1, 1, 2, 2, 2, 4]
+  pinfo:
+    tile_specs:
+      abut_list: []
+      arr_info:
+        lch: 30
+        top_layer: 4
+        tr_spaces: &id001 {}
+        tr_widths: &id002
+          cap: {3: 3, 4: 3}
+          sig: {2: 1, 3: 2}
+          sup: {2: 1, 3: 1, 4: 4, 5: 1}
+      place_info:
+        drv_tile:
+          bot_mirror: true
+          min_height: 1100
+          priority: 1
+          row_specs:
+          - bot_wires:
+              data: [sup<0>, 'sig<0:4>', sup<1>]
+              shared: [sup]
+            flip: true
+            mos_type: nch
+            threshold: standard
+            top_wires:
+              data: ['sig<0:4>', sup]
+              shared: [sup]
+            width: 84
+          top_mirror: true
+    tiles:
+    - {name: drv_tile}
+  pinfo_cm:
+    tile_specs:
+      abut_list: []
+      arr_info:
+        lch: 30
+        top_layer: 4
+        tr_spaces: *id001
+        tr_widths: *id002
+      place_info:
+        sw_tile:
+          bot_mirror: true
+          priority: 1
+          row_specs:
+          - bot_wires: [sup, 'sig<0:1>']
+            flip: true
+            mos_type: nch
+            threshold: standard
+            top_wires: ['sig<0:2>', sup]
+            width: 84
+          top_mirror: true
+    tiles:
+    - {name: sw_tile}
+  ratio_list: [1, 1, 1, 3, 4, 4, 4, 8, 8]
+  remove_cap: false
+  row_list: [1, 1, 1, 1, 2, 3, 4, 4, 7]
+  seg: 32
+  seg_cm: 16
+  sp: 4
+  sw_type: [n, n, p]
+  tr_spaces: *id001
+  tr_widths: *id002
+  w: 84
+  w_cm: 84
+  w_n: 84
+  w_p: 84
+  width: 1600
+root_dir: gen_outputs/bag_sar

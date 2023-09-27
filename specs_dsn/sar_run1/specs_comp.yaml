@@ -1,0 +1,406 @@
+impl_cell: AAA_Comp_SAR
+impl_lib: AAA_SAR_lay
+lay_class: bag3_sync_sar_adc.layout.sar_comp.SA
+params:
+  add_tap: true
+  cls_name: bag3_sync_sar_adc.layout.sar_comp.SA
+  num_comp_tiles: 3
+  pinfo:
+    tile_specs:
+      abut_list: !!python/object:bag.util.immutable.ImmutableList
+        _content:
+        - !!python/object:bag.util.immutable.ImmutableList
+          _content:
+          - !!python/object:bag.util.immutable.ImmutableList
+            _content: [ptap_tile, 1]
+            _hash: 8361905697839490044
+          - !!python/object:bag.util.immutable.ImmutableList
+            _content: [sa_tile, 0]
+            _hash: 7948865137475546101
+          _hash: 8807729700220143598
+        - !!python/object:bag.util.immutable.ImmutableList
+          _content:
+          - !!python/object:bag.util.immutable.ImmutableList
+            _content: [sa_tile, 1]
+            _hash: 7948865137475546100
+          - !!python/object:bag.util.immutable.ImmutableList
+            _content: [ntap_tile, 0]
+            _hash: 9056489411334355678
+          _hash: 4833985492220820719
+        - !!python/object:bag.util.immutable.ImmutableList
+          _content:
+          - !!python/object:bag.util.immutable.ImmutableList
+            _content: [ntap_tile, 0]
+            _hash: 9056489411334355678
+          - !!python/object:bag.util.immutable.ImmutableList
+            _content: [logic_tile, 1]
+            _hash: 5730190631709098633
+          _hash: 2816956543875619760
+        - !!python/object:bag.util.immutable.ImmutableList
+          _content:
+          - !!python/object:bag.util.immutable.ImmutableList
+            _content: [ptap_tile1, 0]
+            _hash: 6819870096110222607
+          - !!python/object:bag.util.immutable.ImmutableList
+            _content: [logic_tile, 0]
+            _hash: 5730190631709098634
+          _hash: 5680411982481055037
+        _hash: 8925699474586421170
+      arr_info:
+        lch: 30
+        top_layer: 4
+        tr_spaces: {}
+        tr_widths:
+          clk: {2: 1}
+          sig: {2: 1}
+          sup: {1: 1, 2: 1}
+      place_info:
+        logic_tile:
+          bot_mirror: true
+          priority: 1
+          row_specs: !!python/object:bag.util.immutable.ImmutableList
+            _content:
+            - !!python/object:bag.util.immutable.ImmutableSortedDict
+              _hash: 8585908562637352993
+              _keys: !!python/object:bag.util.immutable.ImmutableList
+                _content: [bot_wires, flip, mos_type, threshold, top_wires, width]
+                _hash: 9195609391482787017
+              _vals: !!python/object:bag.util.immutable.ImmutableList
+                _content:
+                - !!python/object:bag.util.immutable.ImmutableSortedDict
+                  _hash: 5901856207431202049
+                  _keys: !!python/object:bag.util.immutable.ImmutableList
+                    _content: [data]
+                    _hash: 4719047079932927340
+                  _vals: !!python/object:bag.util.immutable.ImmutableList
+                    _content:
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: ['sig<0:1>']
+                      _hash: 2369042154203632288
+                    _hash: 2369042156858068057
+                - true
+                - nch
+                - standard
+                - !!python/object:bag.util.immutable.ImmutableList
+                  _content: ['sig<0:2>']
+                  _hash: 3377014620621715992
+                - 84
+                _hash: 106748841471411133
+            - !!python/object:bag.util.immutable.ImmutableSortedDict
+              _hash: 2193267180020564430
+              _keys: !!python/object:bag.util.immutable.ImmutableList
+                _content: [bot_wires, mos_type, threshold, top_wires, width]
+                _hash: 8329731402665621755
+              _vals: !!python/object:bag.util.immutable.ImmutableList
+                _content:
+                - !!python/object:bag.util.immutable.ImmutableList
+                  _content: ['sig<0:1>']
+                  _hash: 2369042154203632288
+                - pch
+                - standard
+                - !!python/object:bag.util.immutable.ImmutableSortedDict
+                  _hash: 5901856207431202049
+                  _keys: !!python/object:bag.util.immutable.ImmutableList
+                    _content: [data]
+                    _hash: 4719047079932927340
+                  _vals: !!python/object:bag.util.immutable.ImmutableList
+                    _content:
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: ['sig<0:1>']
+                      _hash: 2369042154203632288
+                    _hash: 2369042156858068057
+                - 110
+                _hash: 7690243605849571966
+            _hash: 8154948579874022823
+          top_mirror: true
+        ntap_tile:
+          priority: 2
+          row_specs: !!python/object:bag.util.immutable.ImmutableList
+            _content:
+            - !!python/object:bag.util.immutable.ImmutableSortedDict
+              _hash: 6380684423349767021
+              _keys: !!python/object:bag.util.immutable.ImmutableList
+                _content: [bot_wires, flip, mos_type, threshold, top_wires, width]
+                _hash: 9195609391482787017
+              _vals: !!python/object:bag.util.immutable.ImmutableList
+                _content:
+                - !!python/object:bag.util.immutable.ImmutableSortedDict
+                  _hash: 7617191140592465603
+                  _keys: !!python/object:bag.util.immutable.ImmutableList
+                    _content: [data]
+                    _hash: 4719047079932927340
+                  _vals: !!python/object:bag.util.immutable.ImmutableList
+                    _content:
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: [sup]
+                      _hash: 4111345917030110690
+                    _hash: 4111345919684546459
+                - true
+                - ntap
+                - standard
+                - !!python/object:bag.util.immutable.ImmutableList
+                  _content: []
+                  _hash: 0
+                - 84
+                _hash: 2293185208953912953
+            _hash: 6380684426004202790
+        ptap_tile:
+          priority: 2
+          row_specs: !!python/object:bag.util.immutable.ImmutableList
+            _content:
+            - !!python/object:bag.util.immutable.ImmutableSortedDict
+              _hash: 8527449870920325807
+              _keys: !!python/object:bag.util.immutable.ImmutableList
+                _content: [bot_wires, flip, mos_type, threshold, top_wires, width]
+                _hash: 9195609391482787017
+              _vals: !!python/object:bag.util.immutable.ImmutableList
+                _content:
+                - !!python/object:bag.util.immutable.ImmutableSortedDict
+                  _hash: 7617191140592465603
+                  _keys: !!python/object:bag.util.immutable.ImmutableList
+                    _content: [data]
+                    _hash: 4719047079932927340
+                  _vals: !!python/object:bag.util.immutable.ImmutableList
+                    _content:
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: [sup]
+                      _hash: 4111345917030110690
+                    _hash: 4111345919684546459
+                - true
+                - ptap
+                - standard
+                - !!python/object:bag.util.immutable.ImmutableList
+                  _content: []
+                  _hash: 0
+                - 110
+                _hash: 183503693858614587
+            _hash: 8527449873574761576
+        ptap_tile1:
+          priority: 2
+          row_specs: !!python/object:bag.util.immutable.ImmutableList
+            _content:
+            - !!python/object:bag.util.immutable.ImmutableSortedDict
+              _hash: 8527449870920325807
+              _keys: !!python/object:bag.util.immutable.ImmutableList
+                _content: [bot_wires, flip, mos_type, threshold, top_wires, width]
+                _hash: 9195609391482787017
+              _vals: !!python/object:bag.util.immutable.ImmutableList
+                _content:
+                - !!python/object:bag.util.immutable.ImmutableSortedDict
+                  _hash: 7617191140592465603
+                  _keys: !!python/object:bag.util.immutable.ImmutableList
+                    _content: [data]
+                    _hash: 4719047079932927340
+                  _vals: !!python/object:bag.util.immutable.ImmutableList
+                    _content:
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: [sup]
+                      _hash: 4111345917030110690
+                    _hash: 4111345919684546459
+                - true
+                - ptap
+                - standard
+                - !!python/object:bag.util.immutable.ImmutableList
+                  _content: []
+                  _hash: 0
+                - 110
+                _hash: 183503693858614587
+            _hash: 8527449873574761576
+        sa_tile:
+          bot_mirror: false
+          priority: 1
+          row_specs: !!python/object:bag.util.immutable.ImmutableList
+            _content:
+            - !!python/object:bag.util.immutable.ImmutableSortedDict
+              _hash: 6400907294948908815
+              _keys: !!python/object:bag.util.immutable.ImmutableList
+                _content: [bot_wires, mos_type, threshold, top_wires, width]
+                _hash: 8329731402665621755
+              _vals: !!python/object:bag.util.immutable.ImmutableList
+                _content:
+                - !!python/object:bag.util.immutable.ImmutableSortedDict
+                  _hash: 900484000244392591
+                  _keys: !!python/object:bag.util.immutable.ImmutableList
+                    _content: [data, shared]
+                    _hash: 7591928669513441461
+                  _vals: !!python/object:bag.util.immutable.ImmutableList
+                    _content:
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: [sup, 'sig<0:1>']
+                      _hash: 5454307147599021434
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: [sup]
+                      _hash: 4111345917030110690
+                    _hash: 8345492424973476628
+                - nch
+                - standard
+                - !!python/object:bag.util.immutable.ImmutableList
+                  _content: ['sig<0:2>']
+                  _hash: 3377014620621715992
+                - 84
+                _hash: 2890681165354971453
+            - !!python/object:bag.util.immutable.ImmutableSortedDict
+              _hash: 2394856103767201543
+              _keys: !!python/object:bag.util.immutable.ImmutableList
+                _content: [bot_wires, flip, mos_type, threshold, top_wires, width]
+                _hash: 9195609391482787017
+              _vals: !!python/object:bag.util.immutable.ImmutableList
+                _content:
+                - !!python/object:bag.util.immutable.ImmutableList
+                  _content: ['sig<0:1>']
+                  _hash: 2369042154203632288
+                - true
+                - nch
+                - standard
+                - !!python/object:bag.util.immutable.ImmutableSortedDict
+                  _hash: 5901856207431202049
+                  _keys: !!python/object:bag.util.immutable.ImmutableList
+                    _content: [data]
+                    _hash: 4719047079932927340
+                  _vals: !!python/object:bag.util.immutable.ImmutableList
+                    _content:
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: ['sig<0:1>']
+                      _hash: 2369042154203632288
+                    _hash: 2369042156858068057
+                - 84
+                _hash: 6296747070411367075
+            - !!python/object:bag.util.immutable.ImmutableSortedDict
+              _hash: 2894566391458482154
+              _keys: !!python/object:bag.util.immutable.ImmutableList
+                _content: [bot_wires, mos_type, threshold, top_wires, width]
+                _hash: 8329731402665621755
+              _vals: !!python/object:bag.util.immutable.ImmutableList
+                _content:
+                - !!python/object:bag.util.immutable.ImmutableList
+                  _content: ['sig<0:1>']
+                  _hash: 2369042154203632288
+                - nch
+                - standard
+                - !!python/object:bag.util.immutable.ImmutableSortedDict
+                  _hash: 5901856207431202049
+                  _keys: !!python/object:bag.util.immutable.ImmutableList
+                    _content: [data]
+                    _hash: 4719047079932927340
+                  _vals: !!python/object:bag.util.immutable.ImmutableList
+                    _content:
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: ['sig<0:1>']
+                      _hash: 2369042154203632288
+                    _hash: 2369042156858068057
+                - 84
+                _hash: 6377879640259512410
+            - !!python/object:bag.util.immutable.ImmutableSortedDict
+              _hash: 3462772786960395880
+              _keys: !!python/object:bag.util.immutable.ImmutableList
+                _content: [bot_wires, flip, mos_type, threshold, top_wires, width]
+                _hash: 9195609391482787017
+              _vals: !!python/object:bag.util.immutable.ImmutableList
+                _content:
+                - !!python/object:bag.util.immutable.ImmutableList
+                  _content: ['sig<0:1>']
+                  _hash: 2369042154203632288
+                - true
+                - pch
+                - standard
+                - !!python/object:bag.util.immutable.ImmutableSortedDict
+                  _hash: 2579478150188639687
+                  _keys: !!python/object:bag.util.immutable.ImmutableList
+                    _content: [data, shared]
+                    _hash: 7591928669513441461
+                  _vals: !!python/object:bag.util.immutable.ImmutableList
+                    _content:
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: ['sig<0:2>', sup]
+                      _hash: 5978420316416102512
+                    - !!python/object:bag.util.immutable.ImmutableList
+                      _content: [sup]
+                      _hash: 4111345917030110690
+                    _hash: 6432302367483831884
+                - 110
+                _hash: 5211943129827547510
+            _hash: 1452423804437584616
+          top_mirror: false
+    tiles: !!python/object:bag.util.immutable.ImmutableList
+      _content:
+      - !!python/object:bag.util.immutable.ImmutableSortedDict
+        _hash: 4780258645008513927
+        _keys: !!python/object:bag.util.immutable.ImmutableList
+          _content: [name]
+          _hash: 7665187736532759997
+        _vals: !!python/object:bag.util.immutable.ImmutableList
+          _content: [ptap_tile]
+          _hash: 8471514745371695058
+      - !!python/object:bag.util.immutable.ImmutableSortedDict
+        _hash: 8218690627311013912
+        _keys: !!python/object:bag.util.immutable.ImmutableList
+          _content: [name]
+          _hash: 7665187736532759997
+        _vals: !!python/object:bag.util.immutable.ImmutableList
+          _content: [sa_tile]
+          _hash: 7334280984764935997
+      - !!python/object:bag.util.immutable.ImmutableSortedDict
+        _hash: 8569532597974862161
+        _keys: !!python/object:bag.util.immutable.ImmutableList
+          _content: [name]
+          _hash: 7665187736532759997
+        _vals: !!python/object:bag.util.immutable.ImmutableList
+          _content: [ntap_tile]
+          _hash: 7631131146115909252
+      - !!python/object:bag.util.immutable.ImmutableSortedDict
+        _hash: 7673174466332513782
+        _keys: !!python/object:bag.util.immutable.ImmutableList
+          _content: [flip, name]
+          _hash: 2926566551918609768
+        _vals: !!python/object:bag.util.immutable.ImmutableList
+          _content: [true, logic_tile]
+          _hash: 1254909520482433931
+      - !!python/object:bag.util.immutable.ImmutableSortedDict
+        _hash: 5529359618710428381
+        _keys: !!python/object:bag.util.immutable.ImmutableList
+          _content: [name]
+          _hash: 7665187736532759997
+        _vals: !!python/object:bag.util.immutable.ImmutableList
+          _content: [ptap_tile1]
+          _hash: 8373905163025791224
+      _hash: 5513174015258071077
+  sch_cls: comp_strongarm_core
+  seg_dict: !!python/object:bag.util.immutable.ImmutableSortedDict
+    _hash: 1640652291867586370
+    _keys: !!python/object:bag.util.immutable.ImmutableList
+      _content: [buf, in, nfb, pfb, sw, tail]
+      _hash: 1498029730065223706
+    _vals: !!python/object:bag.util.immutable.ImmutableList
+      _content:
+      - !!python/object:bag.util.immutable.ImmutableSortedDict
+        _hash: 9129202656650212699
+        _keys: !!python/object:bag.util.immutable.ImmutableList
+          _content: [n, p]
+          _hash: 8341242330835550736
+        _vals: !!python/object:bag.util.immutable.ImmutableList
+          _content:
+          - !!python/object:bag.util.immutable.ImmutableList
+            _content: [8, 24]
+            _hash: 175247765824
+          - !!python/object:bag.util.immutable.ImmutableList
+            _content: [8, 24]
+            _hash: 175247765824
+          _hash: 11715899414798
+      - 16
+      - 16
+      - 16
+      - 8
+      - 16
+      _hash: 5356973977960282905
+  shield: false
+  substrate_row: false
+  sup_top_layer: 3
+  vertical_out: true
+  w_dict:
+    buf: {n: 84, p: 110}
+    in: 84
+    nfb: 84
+    pfb: 110
+    sw: 110
+    tail: 84
+root_dir: gen_outputs/bag_sar

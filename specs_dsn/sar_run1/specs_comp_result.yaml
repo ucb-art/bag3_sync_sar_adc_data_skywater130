@@ -1,0 +1,41 @@
+delay: !!python/object/apply:numpy.core.multiarray._reconstruct
+  args:
+  - &id001 !!python/name:numpy.ndarray 
+  - !!python/tuple [0]
+  - !!binary |
+    Yg==
+  state: !!python/tuple
+  - 1
+  - !!python/tuple [1]
+  - &id002 !!python/object/apply:numpy.dtype
+    args: [f8, false, true]
+    state: !!python/tuple [3, <, null, null, null, -1, -1, 0]
+  - false
+  - !!binary |
+    C84XXMKr0D0=
+noise: !!python/object/apply:numpy.core.multiarray._reconstruct
+  args:
+  - *id001
+  - !!python/tuple [0]
+  - !!binary |
+    Yg==
+  state: !!python/tuple
+  - 1
+  - !!python/tuple [1]
+  - *id002
+  - false
+  - !!binary |
+    aIB/mvE+Qz8=
+reward: !!python/object/apply:numpy.core.multiarray._reconstruct
+  args:
+  - *id001
+  - !!python/tuple [0]
+  - !!binary |
+    Yg==
+  state: !!python/tuple
+  - 1
+  - !!python/tuple [1]
+  - *id002
+  - false
+  - !!binary |
+    NfYbD2WamkA=
